@@ -237,3 +237,42 @@ td
     padding: 20px 0px;  
     text-align: center;
 }
+
+
+/* smaller screens */
+@media screen and (max-width: 768px) {
+    .logo p {
+        font-size: 1.5rem;
+    }
+
+    .stat h1 {
+        font-size: 1.2rem;
+        word-wrap: break-word;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-area {
+        margin: 0;
+    }
+    
+}
+
+/* for every smaller screen  */
+@media screen and (max-width: 480px) {
+    .logo p {
+        font-size: 1rem;
+    }
+
+    .stat h1 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
+
+

@@ -3,92 +3,145 @@ const ctx2 = document.getElementById('doughnutchart');
 const ctx3 = document.getElementById('polararea');
 
 Chart.defaults.color = "white";
-
-new Chart(ctx,{
-
-    type:'line',
-    data:{
-      
-        labels:['January','February','March','April','May','June'],
-        datasets:[
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [
             {
-                label:"Revenue",
-                data:[20,30,15,45,30,35],
+                label: "Revenue",
+                data: [20, 30, 15, 45, 30, 35],
                 borderWidth: 1
             },
             {
-                label:"Customers",
-                data:[25,35,15,50,10,35],
+                label: "Customers",
+                data: [25, 35, 15, 50, 10, 35],
                 borderWidth: 1
             },
             {
-                label:"Sales",
-                data:[21,38,35,20,25,35],
+                label: "Sales",
+                data: [21, 38, 35, 20, 25, 35],
                 borderWidth: 1
             }
-        ]
-    },
-    options: {
-    
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-        }
-
-})
-
-
-new Chart(ctx2,{
-
-    type:'doughnut',
-    data:{
-        labels:['January','February','March','April','May','June'],
-        datasets:[
-            {
-                label:"Revenue",
-                data:[20,30,15,45,30,35],
-                borderWidth: 1
-            },
-           
         ]
     },
     options: {
         responsive: true,
+        maintainAspectRatio: false,
         scales: {
             y: {
                 beginAtZero: true
             }
-        }
-        }
-
-    })
-
-    new Chart(ctx3,{
-
-        type:'polarArea',
-        data:{
-            labels:['January','February','March','April','May','June'],
-            datasets:[
-                {
-                    label:"Revenue",
-                    data:[20,30,15,45,30,35],
-                    borderWidth: 1
-                },
-            
-            ]
         },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    color: '#ffffff',
+                    padding: 20
                 }
+            },
+             tooltip: {
+                padding: 10,
+                cornerRadius: 8
             }
-            }
+        }
+    }
+});
 
-        })
+
+new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [
+            {
+                label: "Revenue",
+                data: [20, 30, 15, 45, 30, 35],
+                borderWidth: 1,
+                backgroundColor: [
+                    "#4a85f8",
+                    "#f85084",
+                    "#50f895",
+                    "#f8a150",
+                    "#8050f8",
+                    "#f8e250"
+                ]
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'right',
+                labels: {
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    color: '#ffffff',
+                    padding: 10
+                }
+            },
+            tooltip: {
+                padding: 12,
+                cornerRadius: 10
+            }
+        }
+    }
+});
+
+
+new Chart(ctx3, {
+    type: 'polarArea',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [
+            {
+                label: "Revenue",
+                data: [20, 30, 15, 45, 30, 35],
+                borderWidth: 1,
+                backgroundColor: [
+                    "#4a85f8",
+                    "#f85084",
+                    "#50f895",
+                    "#f8a150",
+                    "#8050f8",
+                    "#f8e250"
+                ]
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    color: '#ffffff',
+                    padding: 15
+                }
+            },
+            tooltip: {
+                padding: 15,
+                cornerRadius: 8
+            }
+        }
+    }
+});
+
+
 
 
 
@@ -115,7 +168,7 @@ document.getElementById("light-mode").addEventListener("click",function(){
     document.getElementById("light-mode").parentElement.style.display="none";
 
 
-})
+});
 
 
 
@@ -142,4 +195,4 @@ document.getElementById("dark-mode").addEventListener("click",function(){
 
 
 
-})
+});
