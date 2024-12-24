@@ -9,11 +9,13 @@ A simple and responsive dashboard UI created using HTML, CSS, and JavaScript.
 
 ## Screenshots
 
-### Light Theme
-![Light Theme](dashboard-screenshots/dashboard-screenshot (Light Theme).png)
-
 ### Dark Theme
-![Dark Theme](dashboard-screenshots/dashboard-screenshot (Dark Theme).png)
+![Dark Theme](https://github.com/PalaniRahulDravid/Responsive-Dashboard/blob/master/dashboard-screenshots/dashboard-screenshot%20(Dark%20Theme).png)
+
+### Light Theme
+![Light Theme](https://github.com/PalaniRahulDravid/Responsive-Dashboard/blob/master/dashboard-screenshots/dashboard-screenshot%20(Light%20Theme).png)
+
+The above captured images are only the visible part of my project. Once you open my project fully, the entire view will be visible.
 
 ## Installation
 1. Clone the repo: git clone ( https://github.com/PalaniRahulDravid/Responsive-Dashboard.git )
