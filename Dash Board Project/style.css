@@ -238,16 +238,20 @@ td
     text-align: center;
 }
 
-
 /* smaller screens */
 @media screen and (max-width: 768px) {
     .logo p {
         font-size: 1.5rem;
     }
 
-    .stat h1 {
-        font-size: 1.2rem;
-        word-wrap: break-word;
+    .stat {
+        width: 48%; 
+        margin-bottom: 20px;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .sidebar {
@@ -255,12 +259,22 @@ td
     }
 
     .main-area {
+        width: 100%;
         margin: 0;
     }
-    
+
+    .charts {
+        flex-wrap: wrap; 
+        gap: 20px;
+    }
+
+    .line-chart, .doughnut-chart, .polar-area {
+        width: 100%; 
+        height: auto; 
+    }
 }
 
-/* for every smaller screen  */
+/* for very small screens */
 @media screen and (max-width: 480px) {
     .logo p {
         font-size: 1rem;
@@ -270,9 +284,31 @@ td
         font-size: 1rem;
     }
 
+    .stat {
+        width: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .charts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products {
+        font-size: 0.9rem;
+    }
+
+    .table th, .table td {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
     body {
         font-size: 14px;
     }
 }
-
 
